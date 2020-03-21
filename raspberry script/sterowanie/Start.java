@@ -7,7 +7,7 @@ import java.util.Scanner;
 public class Start {
 
     JFrame frame;
-    JButton up, down, homeUp, homeDown, read, autoB ;
+    JButton up, down, homeUp, homeDown, read, autoB;
     String temperature = "0";
     JLabel temperatureInfo;
     JCheckBox auto;
@@ -80,27 +80,7 @@ public class Start {
 
         });
 
-        read = new JButton("update");
-        read.setBounds(250, 50, 100, 20);
-        frame.add(read );
-        read .addActionListener(e -> {
-
-            String cmd = "sudo ./read";
-            Runtime run = Runtime.getRuntime();
-            try {
-
-                Process pr = run.exec(cmd);
-                Scanner fromProc = new Scanner(new InputStreamReader(pr.getInputStream()));
-                while (fromProc.hasNextLine()) {
-                    temperature = fromProc.nextLine();
-                    temperatureInfo.setText("Temperatura na zewnatrz: "+ temperature);
-                }
-            } catch (IOException ex) {
-                ex.printStackTrace();
-            }
-
-
-        });
+        
         autoB = new JButton("send CheckBox");
         autoB.setBounds(250,150, 200,50);
         frame.add(autoB);
@@ -125,10 +105,7 @@ public class Start {
                 }
             }
         });
-        temperatureInfo = new JLabel();
-        frame.add(temperatureInfo);
-        temperatureInfo.setBounds(250, 20, 250, 30);
-        temperatureInfo.setText("Temperatura na zewnatrz: "+ temperature);
+        
 
 
         auto = new JCheckBox("Tryb automatyczny");
