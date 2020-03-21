@@ -40,8 +40,8 @@ Project.bin \
 all: Project.elf secondary-outputs
 
 # Tool invocations
-Project.elf: $(OBJS) $(USER_OBJS) C:\Users\erykw\OneDrive\Pulpit\Project\STM32L152RETX_FLASH.ld
-	arm-none-eabi-gcc -o "Project.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m3 -T"C:\Users\erykw\OneDrive\Pulpit\Project\STM32L152RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Project.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Project.elf: $(OBJS) $(USER_OBJS) C:\Users\erykw\Pulpit\Project\STM32L152RETX_FLASH.ld
+	arm-none-eabi-gcc -o "Project.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m3 -T"C:\Users\erykw\Pulpit\Project\STM32L152RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Project.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 

@@ -1,6 +1,6 @@
 motor.c:5:6:HAL_GPIO_EXTI_Callback	16	static
 motor.c:25:6:new_data	16	static
-motor.c:63:6:move_motor	8	static
-motor.c:111:6:home_up	4	static
-motor.c:119:6:home_down	4	static
-motor.c:125:6:auto_fotodetector	16	static
+motor.c:65:6:move_motor	8	static
+motor.c:107:6:home_up	4	static
+motor.c:115:6:home_down	4	static
+motor.c:121:6:auto_fotodetector	16	static

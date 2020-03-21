@@ -96,6 +96,8 @@ int main(void)
   /* USER CODE BEGIN 2 */
   HAL_UART_Receive_IT(&huart1, &data, 1);
   HAL_ADC_Start(&hadc);
+
+
   /* USER CODE END 2 */
 
   /* Infinite loop */

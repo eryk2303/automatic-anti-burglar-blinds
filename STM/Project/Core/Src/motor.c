@@ -54,6 +54,8 @@ void new_data(uint8_t new)
 		{
 
 			control = 1;
+			auto_down = 0;
+			auto_up = 0;
 		}
 }
 
@@ -68,10 +70,7 @@ void move_motor()
 
 		HAL_GPIO_WritePin(ENABLE_GPIO_Port, ENABLE_Pin, GPIO_PIN_RESET);
 		HAL_GPIO_WritePin(DIR_GPIO_Port, DIR_Pin, GPIO_PIN_SET);
-		HAL_Delay(1);
-		HAL_GPIO_WritePin(STEP_GPIO_Port, STEP_Pin, GPIO_PIN_SET);
-		HAL_Delay(1);
-		HAL_GPIO_WritePin(STEP_GPIO_Port, STEP_Pin, GPIO_PIN_RESET);
+		HAL_GPIO_TogglePin(STEP_GPIO_Port, STEP_Pin);
 		HAL_Delay(1);
 		++count_position;
 		if(count_position == 20)
@@ -87,10 +86,7 @@ void move_motor()
 
 		HAL_GPIO_WritePin(ENABLE_GPIO_Port, ENABLE_Pin, GPIO_PIN_RESET);
 		HAL_GPIO_WritePin(DIR_GPIO_Port, DIR_Pin, GPIO_PIN_RESET);
-		HAL_Delay(1);
-		HAL_GPIO_WritePin(STEP_GPIO_Port, STEP_Pin, GPIO_PIN_SET);
-		HAL_Delay(1);
-		HAL_GPIO_WritePin(STEP_GPIO_Port, STEP_Pin, GPIO_PIN_RESET);
+		HAL_GPIO_TogglePin(STEP_GPIO_Port, STEP_Pin);
 		HAL_Delay(1);
 		++count_position;
 		if(count_position == 20)
@@ -138,7 +134,7 @@ void auto_fotodetector(uint8_t auto_foto)
 		{
 			if(auto_foto > 220)
 			{
-					home_up();
+				home_up();
 			}
 		}
 	}

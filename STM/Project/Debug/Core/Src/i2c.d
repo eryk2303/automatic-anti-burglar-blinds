@@ -1,5 +1,4 @@
-Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_tim.o: \
- ../Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_tim.c \
+Core/Src/i2c.o: ../Core/Src/i2c.c ../Core/Inc/i2c.h ../Core/Inc/main.h \
  ../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal.h \
  ../Core/Inc/stm32l1xx_hal_conf.h \
  ../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_rcc.h \
@@ -27,6 +26,10 @@ Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_tim.o: \
  ../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_pwr.h \
  ../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_pwr_ex.h \
  ../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_uart.h
+
+../Core/Inc/i2c.h:
+
+../Core/Inc/main.h:
 
 ../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal.h:
 
