@@ -4,20 +4,28 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Scanner;
 
+/**
+ *class for calling uart scripts
+ */
 public class Start {
 
     JFrame frame;
     JButton up, down, homeUp, homeDown, read, autoB;
-    String temperature = "0";
     JLabel temperatureInfo;
     JCheckBox auto;
 
+    /**
+     *
+     * script call constructor
+     */
     public Start()
     {
         frame = new JFrame();
        
- 	frame.setSize(400, 300);  
-        
+ 	    frame.setSize(400, 300);
+        /**
+         * button for send CheckBox
+         */
         autoB = new JButton("send CheckBox");
         autoB.setBounds(100,150, 200,50);
         frame.add(autoB);
@@ -42,9 +50,10 @@ public class Start {
                 }
             }
         });
-        
 
-
+        /**
+         * check box for check right mode
+         */
         auto = new JCheckBox("zablokuj");
         auto.setBounds(100,100, 200,50);
         frame.add(auto);

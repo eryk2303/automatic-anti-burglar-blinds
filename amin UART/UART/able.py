@@ -1,4 +1,7 @@
 import serial
-ser = serial.Serial('/dev/ttyUSB0')       
-ser.write(b'0')     
+# Open serial port
+ser = serial.Serial('/dev/ttyUSB0')
+# Send UART data
+ser.write(b'0')
+# close serial port
 ser.close()  
